@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="~/Scripts/JavaScript1.js"></script>
+
+    @*<script>
+        function ready(){
+        document.getElementById("Button2").onclick = function () {
+            clickme();
+        }
+        }
+        window.onload = ready;
+    </script>*@
+
+    <script>
+        
+        window.onload = function () {
+         document.getElementById("Button2").onclick = function () {
+             clickme();
+         }
+
+         document.getElementById("Button3").addEventListener("click", function () {
+             clickme();
+         })
+        };
+    </script>
+
+</head>
+<body> @*<body onload="ready();">*@
+    <div>
+        <input id="Button1" type="button" value="Click Me"
+               onclick="clickme();" />
+
+        <input id="Button2" type="button" value="DOM Level 0 Test" />
+        <input id="Button3" type="button" value="DOM Level 0 Test" />
+    </div>
+
+
+</body>
+</html>
